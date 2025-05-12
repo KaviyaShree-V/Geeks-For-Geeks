@@ -26,19 +26,21 @@ class GFG {
 
 
 class Solution {
-    static boolean isPrime(int n) {
+    static boolean isPrime(int n) 
+    {
         // code here
-        boolean b = true;
-        if (n <= 1) {
-            b = false;
-        } else {
-            for (int i = 2; i <= Math.sqrt(n); i++) {
-                if (n % i == 0) {
-                    b = false;
-                    break;
+        int count=0;
+        for(int i=1;i<=Math.sqrt(n);i++){
+            if(n%i==0){
+                count++;
+                if(n/i!=i){
+                    count++;
                 }
             }
         }
-    return b;
+        if(count==2){
+            return true;
+        }
+        return false;
     }
 }
