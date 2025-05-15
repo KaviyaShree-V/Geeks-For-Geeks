@@ -39,18 +39,45 @@ class Main {
 // } Driver Code Ends
 
 
+// class Solution {
+//     // Please change the array in-place
+//     public void insertionSort(int arr[]) {
+//         // code here
+//         for(int i=0;i<arr.length;i++){
+//             int k=i;
+//             while(k>0 && arr[k-1]>arr[k]){
+//                 int temp = arr[k-1];
+//                 arr[k-1] = arr[k];
+//                 arr[k] = temp;
+//                 k--;
+//             }
+//         }
+//     }
+// }
+
 class Solution {
+    
     // Please change the array in-place
-    public void insertionSort(int arr[]) {
-        // code here
-        for(int i=0;i<arr.length;i++){
-            int k=i;
-            while(k>0 && arr[k-1]>arr[k]){
+    public void insertionSort(int arr[])
+    {
+    int index=0;
+    check(index,arr);
+    }
+    
+    void check(int index,int[] arr)
+    {
+        if(index==arr.length)
+        return;
+        
+         int k=index;
+         while(k>0 && arr[k-1]>arr[k])
+         {
                 int temp = arr[k-1];
                 arr[k-1] = arr[k];
                 arr[k] = temp;
                 k--;
             }
-        }
+        
+        check(index+1,arr);
     }
 }
