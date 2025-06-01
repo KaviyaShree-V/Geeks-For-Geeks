@@ -1,14 +1,12 @@
-class Solution {
+class Solution 
+{
     int lowerBound(int[] arr, int target) 
     {
-        // code here
-        int low = 0, high = arr.length - 1;
-        int count = arr.length;
-        while(low <= high)
+        int low = 0,count = arr.length, high = arr.length - 1;
+        for(int i=0; i<arr.length; i++)
         {
-            int mid = ( low + high ) / 2;
-            
-            if(arr[mid] >= target )
+            int mid = (low + high)/2;
+            if(arr[mid] >= target)
             {
                 count = mid;
                 high = mid - 1;
