@@ -5,7 +5,7 @@ class Solution {
         // code here
         int n = stalls.length;
         Arrays.sort(stalls);
-        int low = 1, high = stalls[n - 1];
+        int low = 1, high = 100000000;
         while(low <= high)
         {
             int mid = (low + high)/2;
