@@ -1,14 +1,13 @@
 class Solution {
-    // Function is to check whether two strings are anagram of each other or not.
     public static boolean areAnagrams(String s1, String s2) 
     {
-        // Your code here
-        char[] chars = s1.toCharArray();
-        Arrays.sort(chars);
-        s1 = new String(chars);
-        char[] charss = s2.toCharArray();
-        Arrays.sort(charss);
-        s2 = new String(charss);
+        // code here
+        char[] ch = s1.toCharArray();
+        char[] c = s2.toCharArray();
+        Arrays.sort(ch);
+        Arrays.sort(c);
+        s1 = String.valueOf(ch);
+        s2 = String.valueOf(c);
         if(s1.equals(s2))
         return true;
         return false;
